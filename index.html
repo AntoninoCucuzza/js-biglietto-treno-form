@@ -18,20 +18,24 @@
                 <input type="text" id="nome" placeholder="Enter Name"/>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 p-b2">
                 <label for="">Km da percorrere</label>
                 <input type="number" id="nkm" placeholder="Enter km"/>
 
             </div>
-
+            
             <div class="col-4">
                 <label for="">Fascia d'età</label>
-                <input type="number" id="age" placeholder="Enter Age">
-
+                <select id="age">
+                    <option>Minorenne</option>
+                    <option>Maggiorenne</option>
+                    <option>Over 65</option>
+                </select>                
             </div>
-        
-                <button id="conferma">conferma</button>
-                <button onclick="reset()">reset</button>
+
+            <button class="mr p-05" id="conferma">conferma</button>
+            <button type="reset">reset</button>
+            
         </div>
     </div>
     
@@ -43,9 +47,9 @@
            <hr>
             <div class="d-flex f-row">
                
-                <div class="bg_info col-4">
+                <div class="bg_info col-4 p-1">
                     <h2>Nome passeggero</h2>
-                    <h3 id="name">q</h3>
+                    <h3 id="name"></h3>
                 </div>
                
                 <div class="col-8">
@@ -55,9 +59,9 @@
                         <div class="col-3"><strong>codiceCP</strong></div>
                         <div class="col-3"><strong>Costo biglietto</strong></div>
                         <div class="col-3">biglietto standard</div>
-                        <div class="col-3">5</div>
-                        <div class="col-3">92911</div>
-                        <div class="col-3"></div>
+                        <div class="col-3" id="carrozza"></div>
+                        <div class="col-3" id="codice"></div>
+                        <div class="col-3" id="prezzo"></div>
                     </div>
                  
                 </div>

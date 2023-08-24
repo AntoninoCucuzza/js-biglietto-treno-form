@@ -69,6 +69,9 @@ input, label {
 .t-white{
     color: var(--white);
 }
+.p-05{
+    padding: 0.5rem;
+}
 .p-1{
     padding: 1rem;
 }
@@ -85,4 +88,7 @@ padding: 2rem;
 
 .p-b2{
     padding-bottom: 2rem;
+}
+.mr{
+    margin-right: 0.5rem;
 }

@@ -26,32 +26,45 @@ console.log(priceKm);
 document.getElementById('conferma').addEventListener('click' , function(e){
     e.preventDefault(); 
  
-    const inputKm = document.getElementById('nkm').value
+    const inputName = document.getElementById('nome').value
+    console.log(inputName)
+
+    document.getElementById('name').innerHTML = inputName //stampa nel html il nome 
+
+    const inputKm = document.getElementById('nkm').value // nkm = n=numero km
     console.log(inputKm);
 
     const inputAge = document.getElementById('age').value
     console.log(inputAge);
      
-    var priceTot = (inputKm * priceKm);
+    var priceTot = (inputKm * priceKm); //calcolo prezzo pieno 
+   
+    document.getElementById('codice').innerHTML = Math.floor(Math.random() * 1000000) 
 
-    if (inputAge < 18) { //va applicato uno sconto del 20% per i minorenni
+    document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * 10)
+
+
+    if (inputAge =='Minorenne') { //va applicato uno sconto del 20% per i minorenni
     
         var priceUnder = (priceTot * 0.8)
         console.log(priceUnder)
+
+        document.getElementById('prezzo').innerHTML = (priceUnder.toFixed(2)) + '€'
+
     
-    } else if (inputAge > 65) { //va applicato uno sconto del 40% per gli over 65.
+    } else if (inputAge == 'Over 65') { //va applicato uno sconto del 40% per gli over 65.
     
         var priceOver = (priceTot * 0.6)
         console.log(priceOver);
     
-    } else{
-        console.log(priceTot);
-    }
+        document.getElementById('prezzo').innerHTML = (priceOver.toFixed(2)) + '€'
 
+    
+    } else if (inputAge == ('Maggiorenne')) {
+        console.log(priceTot);
+    
+        document.getElementById('prezzo').innerHTML = (priceTot.toFixed(2)) + '€'
+    
+    }
 });    
 
-
-function res() {
-    console.clear();
-  }
-  
