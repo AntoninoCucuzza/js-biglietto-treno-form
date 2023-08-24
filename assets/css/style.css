@@ -1,16 +1,88 @@
 /* #region common */
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- */
+
 :root{
     --bg-main: #b91450 ;
     --bg-border: #e096b1 ; 
-    --bg-details: #808080 ;
+    --bg-info: #808080 ;
     --black: #000;
     --white: #fff ;
     --bg-button: #cccccc ;
 }
+
+input, label {
+    display:block;
+}
+
 /* #endregion common */
+
+
+.bg_main{
+    background-color: var(--bg-main);
+}
+
+.bg_white{
+    background-color: var(--white);
+}
+
+.bg_info{
+    background-color: var(--bg-info) ;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-4 {
+    width: calc(100% /12 *4);
+}
+
+.col-8{
+    width: calc(100% /12 *8);
+
+}
+
+.col-3{
+    width: calc(100% /12 *3);
+
+}
+.d-block{
+    display: block;
+}
+.d-flex {
+    display: flex;
+}
+.container {
+    width: 80%;
+    max-width: 1080px;
+    margin: auto;
+}
+.j-center{
+    justify-content: center;
+}
+.t-center{
+    text-align: center;
+}
+.t-white{
+    color: var(--white);
+}
+.p-1{
+    padding: 1rem;
+}
+.p-2{
+padding: 2rem;
+}
+.f-column{
+    flex-direction: column;
+
+}
+.f-row{
+    flex-direction: row;
+}
+
+.p-b2{
+    padding-bottom: 2rem;
+}

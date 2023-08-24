@@ -22,22 +22,16 @@ console.log('#############');
 const priceKm = (0.21);
 console.log(priceKm);
 
-var inputKm = document.getElementById('nkm'); //prendo il nome dall'input nkm
 
-var inputAge = document.getElementById('age'); //prendo l'eta dall'input age
-
-const conferma = document.getElementById('conferma');
-
-loop:
-conferma.addEventListener('click' , function(e){
+document.getElementById('conferma').addEventListener('click' , function(e){
     e.preventDefault(); 
-    
-    inputKm = inputKm.value
-    inputAge = inputAge.value
+ 
+    const inputKm = document.getElementById('nkm').value
+    console.log(inputKm);
 
-    console.log(Number(inputAge)); 
-    console.log(Number(inputKm));    
-      
+    const inputAge = document.getElementById('age').value
+    console.log(inputAge);
+     
     var priceTot = (inputKm * priceKm);
 
     if (inputAge < 18) { //va applicato uno sconto del 20% per i minorenni
@@ -56,3 +50,8 @@ conferma.addEventListener('click' , function(e){
 
 });    
 
+
+function res() {
+    console.clear();
+  }
+  
