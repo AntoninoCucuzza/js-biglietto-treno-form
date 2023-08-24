@@ -26,15 +26,33 @@ var inputKm = document.getElementById('nkm'); //prendo il nome dall'input nkm
 
 var inputAge = document.getElementById('age'); //prendo l'eta dall'input age
 
-document.querySelector('.dati').addEventListener('submit', function(e){
+const conferma = document.getElementById('conferma');
+
+loop:
+conferma.addEventListener('click' , function(e){
     e.preventDefault(); 
     
-    console.log (Number(inputAge.value));    
-    console.log(Number(inputKm.value));    
+    inputKm = inputKm.value
+    inputAge = inputAge.value
+
+    console.log(Number(inputAge)); 
+    console.log(Number(inputKm));    
+      
+    var priceTot = (inputKm * priceKm);
+
+    if (inputAge < 18) { //va applicato uno sconto del 20% per i minorenni
     
-   // var priceTot = (inputKm * priceKm);   document.getElementById(nkm)  
-    console.log (priceTot);
+        var priceUnder = (priceTot * 0.8)
+        console.log(priceUnder)
+    
+    } else if (inputAge > 65) { //va applicato uno sconto del 40% per gli over 65.
+    
+        var priceOver = (priceTot * 0.6)
+        console.log(priceOver);
+    
+    } else{
+        console.log(priceTot);
+    }
 
-});
-
+});    
 
