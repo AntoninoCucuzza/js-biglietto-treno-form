@@ -1,10 +1,10 @@
 /* #region common */
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+ */
 :root{
     --bg-main: #b91450 ;
     --bg-border: #e096b1 ; 
